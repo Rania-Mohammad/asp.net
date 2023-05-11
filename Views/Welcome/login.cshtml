@@ -1,0 +1,290 @@
+﻿@{
+	Layout = null;
+	var msg = TempData["errmsg"] as string;
+
+}
+@if(!string.IsNullOrEmpty(msg)&&ViewBag.err==false)
+{
+	<script>
+		alert('@msg');
+	</script>
+}
+@model login;
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		/* Style for the forget password dialog */
+		#forgot-password-dialog {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #f2f2f2;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 0 0 10px #888;
+		z-index: 999;
+		}
+	</style>
+
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body class="img js-fullheight" style="background-image: url(\\welcome\\images\\test.jpg)">
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Login</h2>
+				</div>
+			</div>
+			<form  method="post" asp-action="login" >
+		@*	<form method="post" asp-action="home">*@
+				<div class="row justify-content-center">
+					<div class="col-md-6 col-lg-4">
+						<div class="login-wrap p-0">
+							<h3 class="mb-4 text-center">Have an account?</h3>
+						@*	@if(Model!=false)
+							{
+								<h6 style="color:red">
+									@ViewBag.err
+								</h6>
+							}*@
+						
+							
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="E-mail" name="email" required>
+								</div>
+								<div class="form-group">
+									<input id="password-field" type="password" class="form-control" placeholder="Password" required name="password" />
+									<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+								</div>
+								<div class="form-group text-center" >
+
+									@*<input type="radio" name="state" value="Admin" />Admin
+									<input type="radio" name="state" value="Employee" />Employee*@
+
+								@*<select style="background-color:#fbceb5"class=" form-select form-select-sm"aria-label=".form-select-sm example" name="state">
+									<option disabled selected>Select state</option>
+									<option value="1">Admin</option>
+									<option value="2">Employee</option>*@
+								
+									<select style="background-color:#fbceb5; width:50%" class=" form-control btn btn-primary submit" aria-label=".form-select-sm example" name="state">
+										<option disabled selected>Select state</option>
+										<option value="Admin">Admin</option>
+										<option value="Employee">Employee</option>
+									
+									@*<option > State</option>
+									<option>Admin</option>
+									<option>Employee</option>*@
+									</select>
+									<div class="form-group">
+									<button type="submit" class="form-control btn btn-primary submit px-3 m-2" asp-action="login">Sign In</button>
+
+
+									@*@{
+											if (ViewData["state"]== null)
+											{
+												<button type="submit" class="form-control btn btn-primary submit px-3 m-2" asp-action="login">Sign In</button>
+											}
+											else
+											{
+												<button type="submit" class="form-control btn btn-primary submit px-3 m-2" asp-action="home">Sign In</button>
+
+											}
+
+										}*@
+									
+									</div>
+								@{
+									//Stack<string> x = new Stack<string>();
+
+									//x.Push((string)TempData["type"]);
+									//if ((string)TempData["type2"] != null)
+									//	x.Push((string)TempData["type2"]);
+									//string top = x.Pop();
+									//x.Push(top);
+									//<input style="background:local ; border:none; font-weight:bold " type="text" class="form-control text-center bg-dark " name="type" value="@top" required readonly>
+									//string item = top;
+									//if (item == null)
+									//{
+									//	<div class="form-group">
+									//		<button type="submit" class="form-control btn btn-primary submit px-3 m-2" asp-action="login">Sign In</button>
+									//	</div>
+									//}
+									//else
+									//{
+									//	<div class="form-group">
+									//		<button type="submit" class="form-control btn btn-primary submit px-3 m-2" asp-action="home">Sign In</button>
+									//	</div>
+									//}
+								}
+
+							</div>
+							
+							<div class="form-group d-md-flex">
+								<div class="w-50">
+									<label class="checkbox-wrap checkbox-primary">
+										Remember Me
+										<input type="checkbox" class="form-check-input" id="remember" name="remember">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="#" onclick="showForgotPassword()" style="color: #fbceb5 ">Forgot Password</a>
+								</div>
+							</div>
+
+
+							<!-- The forget password dialog -->
+							<div id="forgot-password-dialog">
+								<h2>Forgot Password</h2>
+								@*<label for="email">Email:</label>
+								<input type="email" id="email" name="email"><br><br>*@
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<label for="remail" style="color:#000000">Email:</label>
+											</td>
+											<td>
+												<input type="email" id="remail" name="remail" placeholder="xx@mosher.com">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<label for="Phone" style="color:#000000">Phone:</label>
+											</td>
+											<td>
+												<input type="text" id="Phone" name="Phone" class=" pass_show">
+											</td>
+											@*<td>
+												<button type="button" style="border:none; right: 5px; top: 5px;" onclick="togglePasswordVisibility()">Show</button>
+											</td>*@
+
+											@*<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>*@
+
+										</tr>
+										<tr>
+										</tr>
+										@*<tr>
+											<td>
+												<label for="repass" style="color:#000000">Reenter Password:</label>
+											</td>
+											<td>
+												<input type="password" id="repass" name="pass" class=" pass_show">
+
+											</td>
+											<td>
+												<button type="button" style="border:none; right: 5px; top: 5px;" onclick="togglePasswordVisibility2()">Show</button>
+											</td>
+										</tr>*@
+									</tbody>
+								</table>
+								@*<label for="email" style="color:#000000">Email:</label>
+								<input type="email" id="email" name="email" placeholder="xx@mosher.com" class="form-group pass_show"><br><br>
+								<label for="pass" style="color:#000000">New Password:</label>
+								<input type="password" id="pass" name="pass" class="form-group pass_show"><br><br>
+								<label for="repass" style="color:#000000">Reenter Password:</label>
+								<input type="password" id="repass" name="pass" class="form-group pass_show"><br><br>*@
+
+								@*<div class="container">
+								<div class="row">
+								<div class="col-sm-4">
+
+								<label>Email</label>
+								<div class="form-group ">
+								<input type="email" value="" class="form-control" placeholder="Email">
+								</div>
+								<label>New Password</label>
+								<div class="form-group pass_show">
+								<input type="password" value="" class="form-control" placeholder="New Password">
+								</div>
+								<label>Confirm Password</label>
+								<div class="form-group pass_show">
+								<input type="password" value="" class="form-control" placeholder="Confirm Password">
+								</div>
+								<div class="form-group pass_show">
+								<input type="text" value="" class="form-control" placeholder="Phone number">
+								</div>
+								</div>
+								</div>
+								</div>*@
+								<input type="submit" value="Submit">
+								<button onclick="hideForgotPassword()">Cancel</button>
+							</div>
+						</form>
+	@*					<div class="text-center">
+
+							<a href="/Welcome/register" class="w-100 text-center">&mdash; Or Sign Up With &mdash;</a>
+
+						</div>*@
+						@*<div class="social d-flex text-center">
+						<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+						<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+						</div>*@
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="/welcome/js/jquery.min.js"></script>
+	<script src="/welcome/js/popper.js"></script>
+	<script src="/welcome/js/bootstrap.min.js"></script>
+	<script src="/welcome/js/main.js"></script>
+	<script>
+		// Show the forget password dialog
+		function showForgotPassword() {
+			document.getElementById("forgot-password-dialog").style.display = "block";
+		}
+		// Hide the forget password dialog
+		function hideForgotPassword() {
+			document.getElementById("forgot-password-dialog").style.display = "none";
+		}
+	</script>
+	<script>
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("pass");
+			var passwordButton = passwordInput.nextElementSibling;
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				passwordButton.textContent = "Hide";
+			} else {
+				passwordInput.type = "password";
+				passwordButton.textContent = "Show";
+			}
+		}
+	</script>
+	<script>
+		function togglePasswordVisibility2() {
+			var passwordInput = document.getElementById("repass");
+			var passwordButton = passwordInput.nextElementSibling;
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				passwordButton.textContent = "Hide";
+			} else {
+				passwordInput.type = "password";
+				passwordButton.textContent = "Show";
+			}
+		}
+	</script>
+
+</body>
+</html>
+

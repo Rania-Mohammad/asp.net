@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+@model string;
+@* href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+*@
+<link rel="stylesheet" href="/Welcome/css/welcome.css">
+@if(TempData["x"] != null)
+{
+    <h1>@TempData["x"] </h1>
+}
+<form method="post" asp-action="Index">
+<div class="wrapper">
+    <ul class="nav-bar">
+        <li class="active" >welcome</li>
+        <li class="nav-item" >
+            @*<a class="nav-link" href="welcome/login" name="owner">
+                Admin
+            </a>*@
+            @if(Model!=null)
+            {
+                    <input type="submit" href="welcome/home" name="start" value="Start" style="color:#FFFF;background:local;border :none;font-weight:bold ;font-size:19px" />
+
+                }
+                <input type="submit" href="welcome/login" name="start" value="Start"style="color:#FFFF;background:local;border :none;font-weight:bold ;font-size:19px" />
+            </li>
+       @* <li action ="welcome/login">
+            @*<a class="nav-link" href="welcome/login" name="employee">
+                Employee
+            </a>*@
+            @*
+                <input type="submit" href="welcome/login" name="employee" value="Employee"style="color:#FFFF;background:local;border :none;font-weight:bold;font-size:18px" />
+        </li>*@
+    </ul>
+
+    <div class="content">
+            <h1 style ="font-size:200%">Follow your money.</h1>
+        <p>They now the way.</p>
+    </div>
+
+</div>
+
+</form>

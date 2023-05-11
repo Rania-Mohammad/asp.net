@@ -1,0 +1,76 @@
+﻿@model projectF.Models.Employee
+
+@{
+    ViewData["Title"] = "addEmployee";
+    Layout = "main";
+}
+
+<h1>addEmployee</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="addEmployee" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="employeeName" class="control-label"></label>
+                <input asp-for="employeeName" class="form-control" />
+                <span asp-validation-for="employeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" placeholder="xxx@mosher.com" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+      @*      <label asp-for="Email" class="control-label"></label>
+            <div class="input-group mb-3 ">
+
+                <input type="text" class="form-control" placeholder="User Name" aria-label="User Name" aria-describedby="basic-addon2" name="">
+                <span class="input-group-text" id="basic-addon2">@@mosher.com</span>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeimage" class="control-label"></label>
+                <input asp-for="employeeimage" class="form-control" type="file" name="img_file" />
+                <span asp-validation-for="employeeimage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label"></label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                <label asp-for="gender" class="control-label"></label>
+                <input asp-for="gender" class="form-control" />
+                <span asp-validation-for="gender" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="salary" class="control-label"></label>
+                <input asp-for="salary" class="form-control" />
+                <span asp-validation-for="salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" name=" Employee" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Employee">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

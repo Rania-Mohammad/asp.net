@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout= "emp";
+}
+@model IEnumerable<finance>;
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Finance </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="  /serv/css/style.css" />
+
+</head>
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Finance</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-striped" style="text-align:center">
+							<thead>
+								<tr style="background:#3e64ff">
+									<th style="color:#ffffff">financeID</th>
+									<th style="color:#ffffff">opeID</th>
+									<th style="color:#ffffff">opeAmount</th>
+									<th style="color:#ffffff">taxes</th>
+									<th style="color:#ffffff">maintenanceAmount</th>
+									<th style="color:#ffffff">state</th>
+									<th style="color:#ffffff">totalAmount</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								@{
+									foreach (var item in Model)
+									{
+										<tr>
+											<th scope="row">@item.financeID</th>
+											<td style="margin:0;padding:0">@item.operationID</td>
+											<td>@item.operationAmount</td>
+											<td>@item.taxes</td>
+											<td>@item.maintenanceAmount</td>
+											<td>@item.state</td>
+											<td>@item.totalAmount</td>
+											
+
+										</tr>
+									}
+								}
+			@*					<tr>
+									<th scope="row">1001</th>
+									<td style="margin:0;padding:0">123</td>
+									<td>$2500</td>
+									<td>15%</td>
+									<td>20%</td>
+									<td>complete</td>
+									<td>$50000</td>
+								
+								</tr>
+
+								<tr>
+									<th scope="row">1001</th>
+									<td style="margin:0;padding:0">123</td>
+									<td>$2500</td>
+									<td>15%</td>
+									<td>20%</td>
+									<td>progressed</td>
+									<td>$50000</td>
+								
+								</tr>*@
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="serv/js/jquery.min.js"></script>
+	<script src="serv/js/popper.js"></script>
+	<script src="serv/js/bootstrap.min.js"></script>
+	<script src="serv/js/main.js"></script>
+
+</body>
+</html>

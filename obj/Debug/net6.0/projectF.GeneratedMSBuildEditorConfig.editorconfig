@@ -1,0 +1,165 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = projectF
+build_property.RootNamespace = projectF
+build_property.ProjectDir = D:\software engineers\سنه تالته\الترم التانى\software development\final project\ELmosher company\projectF\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\software engineers\سنه تالته\الترم التانى\software development\final project\ELmosher company\projectF
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addclient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkY2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addFinance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkRmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addNewHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkTmV3SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addOperation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkT3BlcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/addtodolist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcYWRkdG9kb2xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/ADToDoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcQURUb0RvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcY2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/Deleteclient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlY2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/DeleteEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/DeleteFinance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlRmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/DeleteHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/DeleteOperation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlT3BlcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/DeleteTodolist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRGVsZXRlVG9kb2xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/EditEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRWRpdEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/EditFinance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRWRpdEZpbmFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/empClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcZW1wQ2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/EmpFinance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRW1wRmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/empHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcZW1wSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/finance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcZmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/operation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcb3BlcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/services/ToDoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2VydmljZXNcVG9Eb0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Shared/emp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGVtcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Welcome/home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxob21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Welcome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Welcome/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Welcome/notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxub3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Shared/main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG1haW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1mgzcnckh3
+
+[D:/software engineers/سنه تالته/الترم التانى/software development/final project/ELmosher company/projectF/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jmgc676aqu

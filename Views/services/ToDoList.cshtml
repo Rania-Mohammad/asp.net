@@ -1,0 +1,291 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "emp";
+    ViewData["Title"] = "ToDoList";
+}
+@*for work with list*@
+@model List<projectF.Models.Employee>;
+<!doctype html>
+<html lang="en">
+<head>
+    <title>ToDoList</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/todolist/css/style.css">
+    <style>
+        /* Style for the forget password dialog */
+        #forgot-password-dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #888;
+            z-index: 999;
+        }
+    </style>
+
+
+</head>
+<body>
+    <section class="ftco-section">
+        <form>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">To-DoList</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center mb-4">Tasks Schedule Table</h4>
+                    <div class="table-wrap">
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr style="background:#3e64ff">
+                                    <th style="color:#ffff">Monday</th>
+                                        <th style="color:#ffff">Tuesday</th>
+                                        <th style="color:#ffff">Wednesday</th>
+                                        <th style="color:#ffff">Thursday</th>
+                                        <th style="color:#ffff">Friday</th>
+                                        <th style="color:#ffff">Saturday</th>
+                                        <th style="color:#ffff">Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fa fa-close"></i></td>
+                                        <td class="text-center" style="background:#EAE9E8">
+                                            <strong>taskID:123</strong> <br>
+                                            <p>taskName:ships</p>
+                                            <a href="#" onclick="showForgotPassword()" style="color:#000000"><strong>empID:123</strong></a>
+                                            <strong> deadline: 1/5/2023</strong><br />
+                                            <input  type="checkbox"  />checked
+                                        </>
+                                    </td>
+                                    <td><i class="fa fa-close"></i></td>
+                                        <td class="text-center" style="background:#EAE9E8">
+                                        <strong>taskID:123</strong> <br>
+                                        <p>taskName:ships</p>
+                                            <a href="#" onclick="showForgotPassword()" style="color:#000000"><strong>empID:123</strong></a>
+                                        <strong> deadline: 1/5/2023</strong><br />
+                                        <input type="checkbox" />checked
+                                        </>
+                                    </td>
+                                    <td><i class="fa fa-close"></i></td>
+                                    <td><i class="fa fa-close"></i></td>
+                                    <td><i class="fa fa-close"></i></td>
+                                </tr>
+                                <tr>
+                                        <td class="text-center" style="background:#EAE9E8">
+                                        <strong>taskID:123</strong> <br>
+                                        <p>taskName:ships</p>
+                                            <a href="#" onclick="showForgotPassword()" style="color:#000000"><strong>empID:123</strong></a>
+                                        <strong> deadline: 1/5/2023</strong><br />
+                                        <input type="checkbox" />checked
+                                        </>
+                                    </td>
+                                    <td><i class="fa fa-close"></i></td>
+                                        <td class="text-center" style="background:#EAE9E8">
+                                        <strong>taskID:123</strong> <br>
+                                        <p>taskName:ships</p>
+                                            <a href="#" onclick="showForgotPassword()" style="color:#000000"><strong>empID:123</strong></a>
+                                        <strong> deadline: 1/5/2023</strong><br />
+                                        <input type="checkbox" />checked
+                                        </>
+                                    </td>
+                                    <td><i class="fa fa-close"></i></td>
+                                    <td><i class="fa fa-close"></i></td>
+                                        <td class="text-center" style="background:#EAE9E8">
+                                        <strong>taskID:123</strong> <br>
+                                        <p>taskName:ships</p>
+                                            <a href="#" onclick="showForgotPassword()" style="color:#000000"><strong>empID:123</strong></a>
+                                        <strong> deadline: 1/5/2023</strong><br />
+                                        <input type="checkbox" />checked
+                                        </>
+                                    </td>
+                                    <td><i class="fa fa-close"></i></td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Employee Details Dialog-->
+        <div id="forgot-password-dialog">
+            <h2>Employee Detailes</h2>
+            @*<label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>*@
+            <table>
+                <tbody>
+                        @{@* loop at list*@
+                            foreach(var item in Model)
+                            {
+                                if (item.employeeID == 123)
+                                {
+                                    <tr>
+                                        <td>
+                                            <label for="ID" style="color:#000000">ID:</label>
+                                        </td>
+                                        <td>
+                                            <label id="ID">@item.employeeID</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="name" style="color:#000000">Name:</label>
+                                        </td>
+                                        
+                                        
+                                        <td>
+                                            <label id ="name">@item.employeeName</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="age" style="color:#000000">Age:</label>
+                                        </td>
+                                        <td>
+                                            <labelid ="age">@item.age</labelid>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="gender" style="color:#000000">Gender:</label>
+                                        </td>
+                                       @* <td>
+                                            <label id="gender">@item.gender</label>
+                                        </td>*@
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="salary" style="color:#000000">Salary:</label>
+                                        </td>
+                                        <td>
+                                            <label id ="salary" >@item.salary</label>
+                                        </td>
+                                    </tr>
+                                       
+
+                                        @*<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>*@
+
+                                    
+                               
+                                    
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+               
+                <button onclick="hideForgotPassword()">OK</button>
+            </div>
+                       @* <tr>
+                        <td>
+                            <label for="ID" style="color:#000000">ID:</label>
+                        </td>
+                        <td>
+                                <label></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass" style="color:#000000">New Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="pass" name="pass" class=" pass_show">
+                        </td>
+                        <td>
+                            <button type="button" style="border:none; right: 5px; top: 5px;" onclick="togglePasswordVisibility()">Show</button>
+                        </td>
+
+                        @*<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>*@
+
+                   @* </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="repass" style="color:#000000">Reenter Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="repass" name="pass" class=" pass_show">
+
+                        </td>
+                        <td>
+                            <button type="button" style="border:none; right: 5px; top: 5px;" onclick="togglePasswordVisibility2()">Show</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Submit">
+            <button onclick="hideForgotPassword()">Cancel</button>
+        </div>*@
+        </form>
+    </section>
+    
+
+
+    <script src="todolist/js/jquery.min.js"></script>
+    <script src="todolist/js/popper.js"></script>
+    <script src="todolist/js/bootstrap.min.js"></script>
+    <script src="todolist/js/main.js"></script>
+
+    <script>
+        // Show the forget password dialog
+        function showForgotPassword() {
+            document.getElementById("forgot-password-dialog").style.display = "block";
+        }
+        // Hide the forget password dialog
+        function hideForgotPassword() {
+            document.getElementById("forgot-password-dialog").style.display = "none";
+        }
+    </script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("pass");
+            var passwordButton = passwordInput.nextElementSibling;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordButton.textContent = "Hide";
+            } else {
+                passwordInput.type = "password";
+                passwordButton.textContent = "Show";
+            }
+        }
+    </script>
+    <script>
+        function togglePasswordVisibility2() {
+            var passwordInput = document.getElementById("repass");
+            var passwordButton = passwordInput.nextElementSibling;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordButton.textContent = "Hide";
+            } else {
+                passwordInput.type = "password";
+                passwordButton.textContent = "Show";
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+

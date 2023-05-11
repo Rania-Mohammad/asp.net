@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "emp";
+}
+@model IEnumerable<client>;
+<!doctype html>
+<html lang="en">
+<head>
+	@*<style>
+	body {
+	background-image: url('/serv/images/whatsapp image 2023-04-25 at 17.57.18.jpg');
+	}
+
+	</style>*@
+	<title>client </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="  /serv/css/style.css" />
+
+</head>
+<body>
+	<style>
+		/*body {
+					background-image: url('/serv/images/whatsapp image 2023-04-25 at 17.57.18.jpg') ;background-repeat:no-repeat;background-attachment:fixed;background-size:cover
+
+				}*/
+
+	</style>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section" style="font-family:Georgia, 'Times New Roman', Times, serif">Client</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-striped" style="text-align:center">
+							<thead>
+								<tr style="background:#3e64ff">
+									<th style="color:#ffff">ID</th>
+									<th style="color:#ffff">Name</th>
+									<th style="color:#ffff">opeID</th>
+									<th style="color:#ffff">opeName</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								@{
+									foreach (var item in Model)
+									{
+										<tr>
+											<th scope="row">@item.clientID</th>
+											<td style="margin:0;padding:0">@item.clientName</td>
+											<td>@item.operationID</td>
+											<td>@item.operationName</td>
+											
+										</tr>
+									}
+								}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="serv/js/jquery.min.js"></script>
+	<script src="serv/js/popper.js"></script>
+	<script src="serv/js/bootstrap.min.js"></script>
+	<script src="serv/js/main.js"></script>
+
+</body>
+</html>
+
+

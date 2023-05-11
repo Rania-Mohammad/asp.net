@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout="_Layout";
+}
+@model IEnumerable<operations>;
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Operation </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="  /serv/css/style.css" />
+
+</head>
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Operation</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-striped" style="text-align:center">
+							<thead>
+								<tr style="background:#3e64ff">
+									<th style="color:#ffffff">ID</th>
+									<th style="color:#ffffff">Name</th>
+									<th style ="color:#ffffff">startDate</th>
+									<th style="color:#ffffff">end Date</th>
+									<th style="color:#ffffff">clientID</th>
+									<th style="color:#ffffff">financeID</th>
+									<th style="color:#ffffff">options</th>
+								</tr>
+							</thead>
+							<tbody>
+								@{
+									foreach (var item in Model)
+									{
+										<tr>
+											<th scope="row">@item.operationsID</th>
+											<td style="margin:0;padding:0">@item.operationName</td>
+											<td>@item.startDate</td>
+											<td>@item.endDate</td>
+											<td>@item.clientID</td>
+											<td>@item.financeID</td>
+											<td style="text-align:center" class=" d-flex">
+												@*<a type="submit" name="Add" value="Add" class="btn btn-info" asp-action="addclient"  />*@
+												<a href="/services/addOperation" class="btn btn-link" style="font-size:200%">
+													<i class="fa fa-plus-circle" aria-hidden="true"></i>
+												</a>
+												<a href="/services/DeleteOperation/@item.operationsID" style="font-size:200%; color:red;margin-right:20px;margin-left:10px">
+													<i class="fa fa-trash-o" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+									}
+								}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="serv/js/jquery.min.js"></script>
+	<script src="serv/js/popper.js"></script>
+	<script src="serv/js/bootstrap.min.js"></script>
+	<script src="serv/js/main.js"></script>
+
+</body>
+</html>

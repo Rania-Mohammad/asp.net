@@ -1,0 +1,60 @@
+﻿@model projectF.Models.operations
+
+@{
+    ViewData["Title"] = "addOperation";
+    Layout = "main";
+}
+
+
+
+<h1>addOperation</h1>
+
+<h4>operations</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="addOperation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="operationName" class="control-label"></label>
+                <input asp-for="operationName" class="form-control" />
+                <span asp-validation-for="operationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="startDate" class="control-label"></label>
+                <input asp-for="startDate" class="form-control" />
+                <span asp-validation-for="startDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="endDate" class="control-label"></label>
+                <input asp-for="endDate" class="form-control" />
+                <span asp-validation-for="endDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clientID" class="control-label"></label>
+                <select asp-for="clientID" class ="form-control">
+                    @foreach(var item in ViewBag.clientID)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="financeID" class="control-label"></label>
+                <input asp-for="financeID" class="form-control" />
+                <span asp-validation-for="financeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit"name=" operation" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="operation">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

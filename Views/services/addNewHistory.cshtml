@@ -1,0 +1,73 @@
+﻿@model projectF.Models.History
+
+@{
+    ViewData["Title"] = "addNewHistory";
+    Layout = "main";
+}
+
+<h1>addNewHistory</h1>
+
+<h4>History</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="addNewHistory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="operationID" class="control-label"></label>
+                <select asp-for="operationID" class ="form-control" >
+
+                    @foreach (var item in ViewBag.operationID)
+                    {
+                        <option value="@item" >@item</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="operationName" class="control-label"></label>
+                <input asp-for="operationName" class="form-control" />
+                <span asp-validation-for="operationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="operationDate" class="control-label"></label>
+                <input asp-for="operationDate" class="form-control" />
+                <span asp-validation-for="operationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="egyPrice" class="control-label"></label>
+                <input asp-for="egyPrice" class="form-control" />
+                <span asp-validation-for="egyPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dollarPrice" class="control-label"></label>
+                <input asp-for="dollarPrice" class="form-control" />
+                <span asp-validation-for="dollarPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clientID" class="control-label"></label>
+                <input asp-for="clientID" class="form-control" />
+                <span asp-validation-for="clientID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeID" class="control-label"></label>
+                <select asp-for="employeeID" class ="form-control" >
+                    @foreach(var item in ViewBag.employeeID)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="History" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="History">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
